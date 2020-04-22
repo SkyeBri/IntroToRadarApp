@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="960dp"
+        android:layout_height="600dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/radar_block_diagram"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnTransmitter"
+            android:layout_width="115dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="352dp"
+            android:layout_marginLeft="352dp"
+            android:layout_marginTop="60dp"
+            android:alpha="0"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+            android:id="@+id/btnWaveformGenerator"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="512dp"
+            android:layout_marginLeft="512dp"
+            android:layout_marginTop="60dp"
+            android:alpha="0"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnTurnover"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="165dp"
+            android:alpha="0"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnReceiver"
+            android:layout_width="115dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="328dp"
+            android:layout_marginLeft="328dp"
+            android:layout_marginTop="216dp"
+            android:alpha="0"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnAD"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="480dp"
+            android:layout_marginLeft="480dp"
+            android:layout_marginTop="216dp"
+            android:alpha="0"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnPulseCompression"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="600dp"
+            android:layout_marginLeft="600dp"
+            android:layout_marginTop="216dp"
+            android:alpha="0"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDopplerProcessing"
+            android:layout_width="115dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="764dp"
+            android:layout_marginLeft="764dp"
+            android:layout_marginTop="216dp"
+            android:alpha="0"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDetection"
+            android:layout_width="115dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="376dp"
+            android:layout_marginLeft="376dp"
+            android:layout_marginTop="416dp"
+            android:alpha="0"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnTracking"
+            android:layout_width="120dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="536dp"
+            android:layout_marginLeft="536dp"
+            android:layout_marginTop="408dp"
+            android:alpha="0"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnConsoleDisplay"
+            android:layout_width="115dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="692dp"
+            android:layout_marginLeft="692dp"
+            android:layout_marginTop="375dp"
+            android:alpha="0"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnRecording"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="692dp"
+            android:layout_marginLeft="692dp"
+            android:layout_marginTop="456dp"
+            android:alpha="0"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_home"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/homeDefaultText"
+            android:textStyle="bold"
+            app:layout_constraintRight_toLeftOf="@id/btnReceiver"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnReceiver" />
+
+        <TextView
+            android:id="@+id/homeSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/source"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/homeSrcLink" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radarDiagramSourceLink"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:textColorLink="@color/colorHyperlink"
+            android:id="@+id/homeSrcLink"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/radar_block_diagram"
+            android:textAllCaps="true"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/btnTargetCrossSection"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:alpha="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="35dp"/>
+
+        <Button
+            android:id="@+id/btnPropagationMedium"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:alpha="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="125dp"/>
+
+        <Button
+            android:id="@+id/btnAntenna"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
+            android:alpha="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="200dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

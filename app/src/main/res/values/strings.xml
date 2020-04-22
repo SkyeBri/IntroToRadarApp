@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">Radar Intro Tool</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Intro to Radar Systems</string>
+    <string name="nav_header_subtitle">Adapted from MIT Lincoln Laboratories Course Online</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_blockDiagram">Radar Block Diagram</string>
+    <string name="menu_RadarRangeEquation">Radar Range Equation</string>
+
+    <string name="homeDefaultText">Click on a Block for more Information.</string>
+    <string name="source">Source:</string>
+    <string name="radarDiagramSourceLink">http://www.ll.mit.edu/sites/default/files/outreach/doc/2018–07/lecture%201.pdf</string>
+    <string name="radar_block_diagram">RADAR BLOCK DIAGRAM</string>
+    <string name="propagationMedium">Propagation Medium is whatever the Radar\'s Electromagnetic Wave Pulses are moving through.\n\nUsually, that would be the surrounding air and whatever else is floating in it.</string>
+    <string name="antenna">The antennae directs the energy from the transmitter to the area in space that you would like to look at to see if there is a target there, and receives reflected energy to forward to the receiver.</string>
+    <string name="turnoverText"> This switch keeps the right wave pulse energy in the right places by forwarding the transmitter energy to the antenna without allowing it to leak into the receiver, and forwarding echos to the receive.\n\nAs the transmitter and receiver work together, there is a delay between transmitting waves and receiving reflected waves. This delay time indicates the distance from the target.</string>
+    <string name="targetCrossSectionText">Radar Cross Section (RCS, or σ) is the effective cross-sectional area of the target as seen by the radar.</string>
+    <string name="transmitterText">The Transmitter amplifies the waveform from the waveform generator and sends it to the switch.</string>
+    <string name="transmitterSarcasmText">The transmitter transmits.\nWho would have thought?</string>
+    <string name="waveformText">The Waveform Generator generates the electromagnetic wave pulses (form of the wave = waveform) for the RADAR to transmit. These range from microwave pulses to some radio wave pulse frequencies, though mostly in the microwave range. \n\nThe \"RA\" in RADAR stands for \"RAdio\" - Largely because radio frequencies were in common use at the time, and no one wanted to say \"Microwave Detection and Ranging\".</string>
+    <string name="receiverText">The Receiver listens for incoming electromagnetic wave pulses that have been reflected off a target ("echos"). Received wave pulses could be RADAR waveforms bouncing off of a target, or bouncing off of clutter, or they could be noise from another source.</string>
+    <string name="analogDigitalString">The Analog to Digital converter (A/D) converts the incoming echo energy into a digital form for easier processing.</string>
+    <string name="pulseCompressionText">Pulse Compression is the process of getting the best possible resolution out of the received pulse/time data. This will try to differentiate between target data and other generic noise</string>
+    <string name="dopplerProcessingText">Doppler Processing determines whether or not the frequency has shifted between transmitting and receiving, which will provide velocity information about the target.</string>
+    <string name="detectionText">After the signal has been processed, the Detection process determines how many distinct targets have been detected above a given noise threshold.</string>
+    <string name="trackingText">Tracking and Parameter Estimation keeps track of the detected targets from one set of pulses to another to get a good estimate of the range, bearing, and velocity of each distinct target.</string>
+    <string name="consoleShamelessPlug">Console / Display - This is whatever you choose to view your Radar Data with.</string>
+    <string name="recordingText">It can be useful to record radar data for later viewing.</string>
+    <string name="noSettingsString">There are no settings as of yet.  What you see is what you get.  :)</string>
+    <string name="received_energy_signal">Received Energy Signal  =</string>
+    <string name="transmit_power">Transmit Power</string>
+    <string name="transmit_gain">Transmit Gain</string>
+    <string name="spread_factor">Spread Factor</string>
+    <string name="dwell_time">Dwell Time</string>
+    <string name="receive_aperture">Receive Aperture</string>
+    <string name="times">*</string>
+    <string name="losses">Losses</string>
+    <string name="target_rcs">Target RCS</string>
+    <string name="isotropic_antenna">Isotropic Antenna</string>
+    <string name="directional_antenna">Directional Antenna</string>
+    <string name="rreExplanation">The Radar Range Equation Connects:\n    1.Target Properties (Radar Reflectivity / Target Cross Section)\n    2. Radar Characteristics (Transmitter Power, Antenna Aperture, etc.)\n    3. Distance Between Target and Radar (Range)\n    4. Properties of the Medium (Atmospheric Attenuation)</string>
+    <string name="rreTitle">RADAR RANGE EQUATION</string>
+    <string name="s_n">S / N</string>
+    <string name="signal_to_noise_ratio">Signal to Noise Ratio</string>
+    <string name="equals">=</string>
+    <string name="power_density">Power Density</string>
+    <string name="P_t">Pₜ</string>
+    <string name="P_t_explanation">Peak Transmit Power of Antenna</string>
+    <string name="R_explanation">Distance from Radar (Range)</string>
+    <string name="G_explanation">Gain: Here assuming that Transmit Gain = Receive Gain</string>
+    <string name="key">KEY</string>
+    <string name="track_radar_equation_title">Track Radar Equation</string>
+    <string name="lambda">λ</string>
+    <string name="sigma">σ</string>
+    <string name="T_s">Tₛ</string>
+    <string name="B_n">Bₙ</string>
+    <string name="T_a">Tₐ</string>
+    <string name="T_r">Tᵣ</string>
+    <string name="L_r">Lᵣ</string>
+    <string name="temperature_contribution_from_radio_frequency_rf_components">Temperature Contribution from Radio Frequency (RF) Components</string>
+    <string name="temperature_contribution_from_antenna">Temperature Contribution from Antenna</string>
+    <string name="noise_bandwidth_on_receiver">Noise Bandwidth on Receiver</string>
+    <string name="system_noise_temperature">System Noise Temperature</string>
+    <string name="boltzmann_s_constant_1_38x10_joules_kelvin">Boltzmann\'s Constant: 1.38x10⁻²³ Joules/Kelvin</string>
+    <string name="k">k</string>
+    <string name="noise_power_at_receiver">Noise Power at Receiver</string>
+    <string name="n">N</string>
+    <string name="power_received_power_of_reflected_signal_from_target_and_received_by_radar_s">Power Received: Power of reflected signal from target and received by radar (S)</string>
+    <string name="P_r">Pᵣ</string>
+    <string name="effective_area_of_receiving_antenna">Effective Area of Receiving Antenna</string>
+    <string name="A_e">Aₑ</string>
+    <string name="radar_cross_section_rcs">Radar Cross Section (RCS)</string>
+    <string name="wavelength">Wavelength</string>
+    <string name="area_of_antenna">Area of Antenna</string>
+    <string name="A">A</string>
+    <string name="loss_of_input_rf_components">Loss of input RF Components</string>
+    <string name="T_e">Tₑ</string>
+    <string name="temperature_of_the_receiver">Temperature of the Receiver</string>
+    <string name="L">L</string>
+    <string name="total_system_losses">Total System Losses</string>
+    <string name="G_r">Gᵣ</string>
+    <string name="received_gain_assumed_equal_to_g">Received Gain: Assumed equal to Gₜ</string>
+    <string name="T_o">Tₒ</string>
+    <string name="_290_k">290ᵒK</string>
+    <string name="Omega">Ω</string>
+    <string name="solid_angle_searched">Solid Angle Searched</string>
+    <string name="P_av">Pₐᵥ</string>
+    <string name="average_power">Average Power</string>
+    <string name="t_s">tₛ</string>
+    <string name="scan_time_for_u03a9">Scan Time for Ω</string>
+    <string name="search_radar_equation">Search Radar Equation</string>
+    <string name="s_n_equals">S / N =</string>
+    <string name="G">G</string>
+    <string name="R">R</string>
+    <string name="fill_fields">Please Fill All Relevant Fields</string>
+
+</resources>

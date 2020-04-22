@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="@string/rreTitle"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvRREConnections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="25dp"
+        android:paddingLeft="25dp"
+        android:text="@string/rreExplanation"
+        android:textColor="@color/colorPrimaryLight"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/trackEquationTitle"
+        android:text="@string/track_radar_equation_title"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvRREConnections"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="20dp"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvKEY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryLight"
+            android:clickable="true"
+            android:text="@string/key"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/keyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="@id/tvKEY"
+            app:layout_constraintTop_toBottomOf="@id/tvKEY">
+
+            <!-- Signal to Noise-->
+            <TextView
+                android:id="@+id/tvSNTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/s_n"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSNEquals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintLeft_toRightOf="@+id/tvSNTitle"
+                app:layout_constraintStart_toEndOf="@+id/tvSNTitle"
+                app:layout_constraintTop_toTopOf="@+id/tvSNTitle" />
+
+
+            <TextView
+                android:id="@+id/tvSignalToNoise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signal_to_noise_ratio"
+                app:layout_constraintLeft_toRightOf="@+id/tvSNEquals"
+                app:layout_constraintStart_toEndOf="@+id/tvSNEquals"
+                app:layout_constraintTop_toTopOf="@+id/tvSNTitle" />
+
+            <!-- Transmit Power -->
+            <TextView
+                android:id="@+id/tvXmitPowerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/P_t"
+                app:layout_constraintLeft_toLeftOf="@+id/tvSNTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignalToNoise" />
+
+            <TextView
+                android:id="@+id/tvXmitPowerEquals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintLeft_toLeftOf="@+id/tvSNEquals"
+                app:layout_constraintStart_toStartOf="@+id/tvSNEquals"
+                app:layout_constraintTop_toBottomOf="@id/tvSignalToNoise" />
+
+            <TextView
+                android:id="@+id/tvXmitPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/P_t_explanation"
+                app:layout_constraintLeft_toRightOf="@+id/tvXmitPowerEquals"
+                app:layout_constraintStart_toEndOf="@+id/tvXmitPowerEquals"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignalToNoise" />
+
+            <!-- Average Power -->
+            <TextView
+                android:id="@+id/tvP_avTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/P_av"
+                app:layout_constraintStart_toStartOf="@+id/tvXmitPowerTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvXmitPower" />
+
+            <TextView
+                android:id="@+id/tvP_av"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/average_power"
+                app:layout_constraintStart_toEndOf="@+id/tvEquals21"
+                app:layout_constraintTop_toBottomOf="@+id/tvXmitPower" />
+
+            <!-- Transmit Gain -->
+            <TextView
+                android:id="@+id/tvGainTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/G"
+                app:layout_constraintLeft_toLeftOf="@+id/tvP_avTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvP_av" />
+
+            <TextView
+                android:id="@+id/tvGain"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/G_explanation"
+                app:layout_constraintLeft_toRightOf="@+id/tvXmitPowerEquals"
+                app:layout_constraintStart_toEndOf="@+id/tvXmitPowerEquals"
+                app:layout_constraintTop_toBottomOf="@+id/tvP_av" />
+
+            <!-- Area of Effect -->
+            <TextView
+                android:id="@+id/tvA_eTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/A_e"
+                app:layout_constraintStart_toStartOf="@+id/tvGainTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvGain" />
+
+            <TextView
+                android:id="@+id/tvA_e"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="@string/effective_area_of_receiving_antenna"
+                app:layout_constraintStart_toEndOf="@+id/tvEquals3"
+                app:layout_constraintTop_toBottomOf="@+id/tvGain" />
+
+            <!-- Wavelength -->
+            <TextView
+                android:id="@+id/tvLambdaTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lambda"
+                app:layout_constraintStart_toStartOf="@+id/tvA_eTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvA_e" />
+
+            <TextView
+                android:id="@+id/tvLambda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wavelength"
+                app:layout_constraintLeft_toRightOf="@+id/tvEquals13"
+                app:layout_constraintTop_toBottomOf="@+id/tvA_e" />
+
+            <!-- Scan Time -->
+            <TextView
+                android:id="@+id/tvt_sTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t_s"
+                app:layout_constraintStart_toStartOf="@+id/tvLambdaTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvLambda" />
+
+            <TextView
+                android:id="@+id/tvt_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_time_for_u03a9"
+                app:layout_constraintStart_toEndOf="@+id/tvEquals23"
+                app:layout_constraintTop_toBottomOf="@+id/tvLambda" />
+
+            <!-- Radar Cross Section -->
+            <TextView
+                android:id="@+id/tvSigma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sigma"
+                app:layout_constraintStart_toStartOf="@+id/tvt_sTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvt_s" />
+
+            <TextView
+                android:id="@+id/radarCrossSectionDef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radar_cross_section_rcs"
+                app:layout_constraintStart_toEndOf="@+id/tvEquals3"
+                app:layout_constraintTop_toBottomOf="@+id/tvt_s" />
+
+            <!-- Search Angle -->
+            <TextView
+                android:id="@+id/tvOmegaTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Omega"
+                app:layout_constraintStart_toStartOf="@+id/tvSigma"
+                app:layout_constraintTop_toBottomOf="@+id/radarCrossSectionDef" />
+
+            <TextView
+                android:id="@+id/tvOmega"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/solid_angle_searched"
+                app:layout_constraintStart_toEndOf="@+id/tvEquals22"
+                app:layout_constraintTop_toBottomOf="@+id/radarCrossSectionDef" />
+
+            <!-- Range -->
+            <TextView
+                android:id="@+id/tvRTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/R"
+                app:layout_constraintLeft_toLeftOf="@+id/tvGainTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvOmega" />
+
+            <TextView
+                android:id="@+id/tvR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/R_explanation"
+                app:layout_constraintLeft_toRightOf="@+id/tvEquals3"
+                app:layout_constraintStart_toEndOf="@+id/tvEquals3"
+                app:layout_constraintTop_toBottomOf="@+id/tvOmega" />
+
+            <!-- System Noise Temperature -->
+            <TextView
+                android:id="@+id/tvT_sTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/T_s"
+                app:layout_constraintStart_toStartOf="@+id/tvRTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvR" />
+
+            <TextView
+                android:id="@+id/tvT_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/system_noise_temperature"
+                app:layout_constraintStart_toEndOf="@+id/tvEquals12"
+                app:layout_constraintTop_toBottomOf="@+id/tvR" />
+
+            <!-- Noise Bandwidth on Receiver -->
+            <TextView
+                android:id="@+id/tvB_nTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/B_n"
+                app:layout_constraintStart_toStartOf="@+id/tvT_sTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvT_s" />
+
+            <TextView
+                android:id="@+id/tvB_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/noise_bandwidth_on_receiver"
+                app:layout_constraintStart_toEndOf="@+id/tvEquals13"
+                app:layout_constraintTop_toBottomOf="@+id/tvT_s" />
+
+            <!-- Total Losses -->
+            <TextView
+                android:id="@+id/tvLTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/L"
+                app:layout_constraintStart_toStartOf="@+id/tvB_nTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvB_n" />
+
+            <TextView
+                android:id="@+id/tvL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_system_losses"
+                app:layout_constraintStart_toEndOf="@+id/tvEquals14"
+                app:layout_constraintTop_toBottomOf="@+id/tvB_n" />
+
+            <!-- Boltzmann's Constant -->
+            <TextView
+                android:id="@+id/tvkTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/k"
+                app:layout_constraintStart_toStartOf="@+id/tvLTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvL" />
+
+            <TextView
+                android:id="@+id/tvk"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="@string/boltzmann_s_constant_1_38x10_joules_kelvin"
+                app:layout_constraintStart_toEndOf="@+id/tvEquals11"
+                app:layout_constraintTop_toBottomOf="@+id/tvL" />
+
+            <!-- SO MANY EQUALS SIGNS -->
+
+            <TextView
+                android:id="@+id/tvEquals3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintLeft_toLeftOf="@+id/tvXmitPowerEquals"
+                app:layout_constraintStart_toStartOf="@+id/tvXmitPowerEquals"
+                app:layout_constraintTop_toBottomOf="@id/tvXmitPower" />
+
+            <TextView
+                android:id="@+id/tvEquals6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals3"
+                app:layout_constraintTop_toBottomOf="@+id/tvGain" />
+
+            <TextView
+                android:id="@+id/tvEquals9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals3"
+                app:layout_constraintTop_toBottomOf="@+id/tvA_e" />
+
+            <TextView
+                android:id="@+id/tvEquals10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals9"
+                app:layout_constraintTop_toBottomOf="@+id/tvLambda" />
+
+            <TextView
+                android:id="@+id/tvEquals11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals9"
+                app:layout_constraintTop_toBottomOf="@+id/tvt_s" />
+
+            <TextView
+                android:id="@+id/tvEquals12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals11"
+                app:layout_constraintTop_toBottomOf="@+id/tvOmega" />
+
+            <TextView
+                android:id="@+id/tvEquals13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals12"
+                app:layout_constraintTop_toBottomOf="@+id/tvR" />
+
+            <TextView
+                android:id="@+id/tvEquals14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals13"
+                app:layout_constraintTop_toBottomOf="@+id/tvT_s" />
+
+            <TextView
+                android:id="@+id/tvEquals19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals14"
+                app:layout_constraintTop_toBottomOf="@+id/tvB_n" />
+
+            <TextView
+                android:id="@+id/tvEquals20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals14"
+                app:layout_constraintTop_toBottomOf="@+id/tvL" />
+
+            <TextView
+                android:id="@+id/tvEquals21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals14"
+                app:layout_constraintTop_toBottomOf="@+id/tvL" />
+
+            <TextView
+                android:id="@+id/tvEquals22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals21"
+                app:layout_constraintTop_toBottomOf="@+id/tvSigma" />
+
+            <TextView
+                android:id="@+id/tvEquals23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/equals"
+                app:layout_constraintStart_toStartOf="@+id/tvEquals21"
+                app:layout_constraintTop_toBottomOf="@+id/tvP_av" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryLight"
+        android:text="@string/s_n_equals"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/trackEquationTitle"
+        app:layout_constraintLeft_toLeftOf="@id/trackEquationTitle"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:id="@+id/trackEquationLeft"/>
+
+    <fragment
+        android:id="@+id/trackEquation"
+        android:name="com.simtechinc.radarintrotool.FractionTextViewFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/trackEquationLeft"
+        app:layout_constraintStart_toEndOf="@+id/trackEquationLeft"
+        app:layout_constraintTop_toTopOf="@+id/trackEquationLeft"
+        android:layout_marginLeft="8dp"
+        tools:layout="@layout/fragment_fraction_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryLight"
+        android:text=" = "
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/trackEquationTitle"
+        app:layout_constraintLeft_toRightOf="@id/trackEquation"
+        android:layout_marginTop="20dp"
+        android:id="@+id/trackEquationRight"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryLight"
+        android:text=""
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/trackEquationTitle"
+        app:layout_constraintLeft_toRightOf="@id/trackEquationRight"
+        android:layout_marginTop="20dp"
+        android:id="@+id/trackEquationResult"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchEquationTitle"
+        android:text="@string/search_radar_equation"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/trackEquation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryLight"
+        android:text="@string/s_n_equals"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/searchEquationTitle"
+        app:layout_constraintLeft_toLeftOf="@id/searchEquationTitle"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:id="@+id/searchEquationLeft"/>
+
+    <fragment
+        android:id="@+id/searchEquation"
+        android:name="com.simtechinc.radarintrotool.FractionTextViewFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/searchEquationLeft"
+        app:layout_constraintStart_toEndOf="@+id/searchEquationLeft"
+        app:layout_constraintTop_toTopOf="@+id/searchEquationLeft"
+        android:layout_marginLeft="8dp"
+        tools:layout="@layout/fragment_fraction_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryLight"
+        android:text=" = "
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/searchEquationTitle"
+        app:layout_constraintLeft_toRightOf="@id/searchEquation"
+        android:layout_marginTop="20dp"
+        android:id="@+id/searchEquationRight"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryLight"
+        android:text=""
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/searchEquationTitle"
+        app:layout_constraintLeft_toRightOf="@id/searchEquationRight"
+        android:layout_marginTop="20dp"
+        android:id="@+id/searchEquationResult"/>
+
+    <!-- INPUTS FOR CALCULATION -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PtLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tvRREConnections"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        app:hintTextAppearance="@style/FloatingHintStyle"
+        android:background="#ffffff" >
+        <EditText
+            android:id="@+id/etP_t"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/P_t"
+            android:inputType="numberDecimal"
+            android:gravity="center"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/GLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:hintTextAppearance="@style/FloatingHintStyle"
+        android:background="#ffffff"
+        app:layout_constraintLeft_toLeftOf="@id/PtLayout"
+        app:layout_constraintTop_toBottomOf="@id/PtLayout"
+        android:layout_marginTop="15dp">
+        <EditText
+            android:id="@+id/etG"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/G"
+            android:inputType="numberDecimal"
+            android:gravity="center"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lambdaLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        app:hintTextAppearance="@style/FloatingHintStyle"
+        app:layout_constraintLeft_toLeftOf="@id/GLayout"
+        app:layout_constraintTop_toBottomOf="@id/GLayout">
+        <EditText
+            android:id="@+id/etLambda"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/lambda"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sigmaLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/lambdaLayout"
+        app:layout_constraintTop_toBottomOf="@id/lambdaLayout"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        app:hintTextAppearance="@style/FloatingHintStyle">
+        <EditText
+            android:id="@+id/etSigma"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/sigma"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/RLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/sigmaLayout"
+        app:layout_constraintTop_toBottomOf="@id/sigmaLayout"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        app:hintTextAppearance="@style/FloatingHintStyle">
+        <EditText
+            android:id="@+id/etR"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/R"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/RLayout"
+        app:layout_constraintLeft_toLeftOf="@id/omegaLayout"
+        app:layout_constraintTop_toTopOf="@+id/RLayout"
+        android:background="#ffffff"
+        app:hintTextAppearance="@style/FloatingHintStyle">
+        <EditText
+            android:id="@+id/etT_s"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/T_s"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/BnLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/RLayout"
+        app:layout_constraintTop_toBottomOf="@id/RLayout"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff"
+        app:hintTextAppearance="@style/FloatingHintStyle">
+        <EditText
+            android:id="@+id/etB_n"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/B_n"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/BnLayout"
+        app:layout_constraintLeft_toLeftOf="@id/TsLayout"
+        app:layout_constraintTop_toTopOf="@+id/BnLayout"
+        android:background="#ffffff"
+        app:hintTextAppearance="@style/FloatingHintStyle">
+        <EditText
+            android:id="@+id/etL"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/L"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PavLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/PtLayout"
+        app:layout_constraintLeft_toRightOf="@id/PtLayout"
+        app:layout_constraintTop_toTopOf="@id/PtLayout"
+        android:layout_marginLeft="20dp"
+        android:background="#ffffff"
+        app:hintTextAppearance="@style/FloatingHintStyle">
+        <EditText
+            android:id="@+id/etP_av"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/P_av"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/AeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/GLayout"
+        app:layout_constraintLeft_toLeftOf="@id/PavLayout"
+        app:layout_constraintTop_toTopOf="@+id/GLayout"
+        android:background="#ffffff"
+        app:hintTextAppearance="@style/FloatingHintStyle">
+        <EditText
+            android:id="@+id/etA_e"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/A_e"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/lambdaLayout"
+        app:layout_constraintLeft_toLeftOf="@id/AeLayout"
+        app:layout_constraintTop_toTopOf="@+id/lambdaLayout"
+        android:background="#ffffff"
+        app:hintTextAppearance="@style/FloatingHintStyle">
+        <EditText
+            android:id="@+id/ett_s"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/t_s"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/omegaLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/sigmaLayout"
+        app:layout_constraintLeft_toLeftOf="@id/tsLayout"
+        app:layout_constraintTop_toTopOf="@+id/sigmaLayout"
+        android:background="#ffffff"
+        app:hintTextAppearance="@style/FloatingHintStyle">
+        <EditText
+            android:id="@+id/etOmega"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/Omega"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Buttons! -->
+
+    <Button
+        android:id="@+id/btnTrack"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Calculate Track"
+        app:layout_constraintEnd_toEndOf="@+id/LLayout"
+        app:layout_constraintStart_toStartOf="@+id/BnLayout"
+        app:layout_constraintTop_toBottomOf="@+id/BnLayout" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate Search"
+        app:layout_constraintEnd_toEndOf="@+id/btnTrack"
+        app:layout_constraintStart_toStartOf="@+id/btnTrack"
+        app:layout_constraintTop_toBottomOf="@+id/btnTrack" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
